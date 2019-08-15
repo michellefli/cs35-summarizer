@@ -166,9 +166,9 @@ def compile_reviews():
     driver = webdriver.Chrome()
     driver.get('https://pomonastudents.org/login/cas')
     select = Select(driver.find_element_by_id('selCollege'))
-    select.select_by_visible_text('Pomona College')
-    driver.find_element_by_id('dispname').send_keys('erva2016')
-    driver.find_element_by_id ('password').send_keys('Percy!123')
+    select.select_by_visible_text('Pomona College')  # insert any Claremont College name
+    driver.find_element_by_id('dispname').send_keys('')  # insert username
+    driver.find_element_by_id ('password').send_keys('')  # insert password
     driver.find_element_by_name('_eventId').submit()
     time.sleep(1)
     for e in l:
